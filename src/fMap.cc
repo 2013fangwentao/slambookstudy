@@ -7,7 +7,7 @@ namespace myslam
 void fMap::insertKeyFrame(fFrame::Ptr frame)
 {
     cout<<"Key frame size = "<<key_frames_.size()<<endl;
-    if(key_frames_.find(frame.id_)==key_frames_.end())
+    if(key_frames_.find(frame->id_)==key_frames_.end())
     {
         key_frames_.insert(make_pair(frame->id_,frame));
     }

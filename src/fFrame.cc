@@ -21,7 +21,7 @@ fFrame::~fFrame()
 
 fFrame::Ptr fFrame::createFrame()
 {
-    static long factory_id = 0;      //这种写法确实没有问题吗？
+    static long factory_id = 0;      
     return fFrame::Ptr(new fFrame(factory_id++));
 }
 
@@ -66,11 +66,6 @@ bool fFrame::isInFrame(const Vector3d& pt_world)
            &&pixel(0,0)<color_.cols
            &&pixel(1,0)<color_.rows; 
 }
-
-
-
-
-
 
 
 }

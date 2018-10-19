@@ -1,4 +1,4 @@
-#include "fFrame.h"
+#include "fMapPoint.h"
 
 namespace myslam
 {
@@ -15,7 +15,7 @@ fMapPoint::fMapPoint( long id, Vector3d position, Vector3d norm )
 
 }
 
-fMapPoint::Ptr fMapPoint::createMapPoint()
+fMapPoint::Ptr fMapPoint::createfMapPoint()
 {
     static long factory_id=0;
     return fMapPoint::Ptr(
