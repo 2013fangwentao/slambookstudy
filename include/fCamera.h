@@ -9,7 +9,7 @@ class Camera
 {
 public:
    using Ptr=std::shared_ptr<Camera>;
-   Camera(){}
+   Camera();
    ~Camera(){}
    Camera(float fx,float fy,float cx,float cy,float depth_scale):
    fx_(fx),fy_(fy),cx_(cx),cy_(cy),depth_scale_(depth_scale){}

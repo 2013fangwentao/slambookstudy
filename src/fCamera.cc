@@ -1,7 +1,16 @@
 #include "fCamera.h"
-
+#include "fConfig.h"
 namespace myslam
 {
+
+Camera::Camera()
+{
+    fx_ = fConfig::get<float>("camera.fx");
+    fy_ = fConfig::get<float>("camera.fy");
+    cx_ = fConfig::get<float>("camera.cx");
+    cy_ = fConfig::get<float>("camera.cy");
+    depth_scale_ = fConfig::get<float>("camera.depth_scale");
+}
 
 Vector3d Camera::world2camera(const Vector3d& p_w,const SE3& T_c_w)
 {
