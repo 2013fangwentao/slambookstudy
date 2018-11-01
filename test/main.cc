@@ -81,7 +81,7 @@ int main(int argc,char** argv)
             break;
         SE3 Tcw = pFrame->T_c_w_.inverse();
         
-        cout<<Tcw.rotation_matrix()<<endl;
+//        cout<<Tcw.rotation_matrix()<<endl;
         // show the map and the camera pose 
         cv::Affine3d M(
             cv::Affine3d::Mat3( 

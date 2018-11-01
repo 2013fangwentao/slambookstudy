@@ -36,6 +36,7 @@ public:
     cv::Mat descriptors_ref_;   //descriptors in reference frame
 
     std::vector<cv::DMatch> feature_matches_;
+    cv::FlannBasedMatcher   matcher_flann_;
     SE3 T_c_r_estimated_;
     int num_inliers_;
     int num_lost_;
@@ -49,6 +50,7 @@ public:
 
     double key_frame_min_rot;
     double key_frame_min_trans;
+    double map_point_erease_ratio_;
 
 public:
     fVisualOdometry();
