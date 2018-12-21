@@ -12,7 +12,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 #Eigen
 include_directories("/usr/include/eigen3")
 #OpenCV
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.4 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 #Sophus
 find_package(Sophus REQUIRED)
@@ -30,6 +30,7 @@ set(
 ################## source and test#####################
 include_directories( ${PROJECT_SOURCE_DIR}/include )
 add_subdirectory( src )
-add_subdirectory( test )
 
+add_executable(run_vo_4 ./test/main.cc)
+target_link_libraries(run_vo_4 myslam)
 

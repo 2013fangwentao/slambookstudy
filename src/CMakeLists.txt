@@ -1,4 +1,4 @@
-set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_BUILD_TYPE "Debug")
 file(GLOB ccFiles "*.cc")
 add_library(
     myslam SHARED
